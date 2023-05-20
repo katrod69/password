@@ -13,8 +13,17 @@ function generatePassword(){
 
 
 
-if (generatePass < 8 || generatePass > 128 || isNaN(generatePass)){
-  alert("Hold your horses, password must be under 128 characters");
+if (generatePass < 8) {
+  alert("Hold your horses, password must be 8-128 characters");
+  return;
+}
+if (generatePass > 128) {
+  alert("Hold your horses, password must be 8-128 characters");
+  return;
+}
+
+if (isNaN(generatePass)) {
+  alert("Hold your horses and enter a number from 8-128");
   return;
 }
 
